@@ -1,0 +1,41 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(167, 92, 167);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.bola{
+    height: 200px;
+    width: 200px;
+    animation-name: mover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes mover  {
+    0% {
+       background-color: mediumpurple; 
+    }
+
+    50%{
+        transform: translateX(200px);
+        background-color: purple;
+
+    }
+
+    100% {
+        background-color: rebeccapurple;
+        transform: translateX(calc(100vw - 200px));
+    }
+
+}
